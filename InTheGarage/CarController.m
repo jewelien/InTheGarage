@@ -51,6 +51,18 @@
     newCar.year = [NSNumber numberWithLong:year];
     newCar.color = color;
     
+    [self addDriverWithName:@"Caleb Hicks" toCar:newCar];
+    
+    [self save];
+}
+
+-(void)addDriverWithName:(NSString *)name toCar:(Car *)car {
+    
+    Driver *driver = [NSEntityDescription insertNewObjectForEntityForName:@"Driver" inManagedObjectContext:self.managedObjectContext];
+    driver.name = name;
+    
+    car.driver = driver;
+    
     [self save];
 }
 

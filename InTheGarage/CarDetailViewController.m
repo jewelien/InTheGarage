@@ -40,6 +40,8 @@
     self.modelTextField.text = car.model;
     self.yearTextField.text = [NSString stringWithFormat:@"%@", car.year];
     self.colorTextField.text = car.color;
+    
+    NSLog(@"%@", car.driver.name);
 }
 
 - (IBAction)saveCar:(id)sender {

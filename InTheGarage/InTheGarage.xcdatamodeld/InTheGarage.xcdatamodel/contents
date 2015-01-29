@@ -5,8 +5,14 @@
         <attribute name="make" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="model" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="driver" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Driver" inverseName="cars" inverseEntity="Driver" syncable="YES"/>
+    </entity>
+    <entity name="Driver" representedClassName="Driver" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cars" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Car" inverseName="driver" inverseEntity="Car" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Car" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Car" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="Driver" positionX="-54" positionY="18" width="128" height="73"/>
     </elements>
 </model>
