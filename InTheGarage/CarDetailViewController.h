@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CarDetailViewController.h
 //  InTheGarage
 //
 //  Created by Caleb Hicks on 1/29/15.
@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CarController.h"
 
-@interface ViewController : UIViewController
+@interface CarDetailViewController : UIViewController
 
+- (void)updateWithCar:(Car *)car;
 
 @end
-

@@ -1,13 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="W7o-2k-4hx">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Car List Table View Controller-->
+        <scene sceneID="7iF-0I-YeZ">
+            <objects>
+                <tableViewController id="2kC-35-ikq" customClass="CarListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="h05-ss-M6e">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="34r-Ev-77p">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="34r-Ev-77p" id="D5C-9Z-s0S">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="show" identifier="viewCar" id="GTD-LL-Qg8"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2kC-35-ikq" id="8PJ-BR-xFT"/>
+                            <outlet property="delegate" destination="2kC-35-ikq" id="mLn-Di-t6Z"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="do4-FT-PWX">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MgK-h5-vfb">
+                            <connections>
+                                <segue destination="vXZ-lx-hvc" kind="show" identifier="addCar" id="N5S-bl-BTg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vck-kh-0GF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1285" y="387"/>
+        </scene>
+        <!--Car Detail View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="CarDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +51,89 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Make" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Pn-ar-c19">
+                                <rect key="frame" x="252" y="130" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="dX5-yz-Cno"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Model" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9t3-Rx-7ag">
+                                <rect key="frame" x="252" y="177" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p0y-94-ocq">
+                                <rect key="frame" x="252" y="225" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Color" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CPK-sT-oBW">
+                                <rect key="frame" x="252" y="280" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNv-BO-bEL">
+                                <rect key="frame" x="269" y="335" width="63" height="30"/>
+                                <state key="normal" title="Save Car">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveCar:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="59p-Nq-kJ9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Pn-ar-c19" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="66" id="1Ot-Xl-U23"/>
+                            <constraint firstItem="UNv-BO-bEL" firstAttribute="top" secondItem="CPK-sT-oBW" secondAttribute="bottom" constant="25" id="4IV-uZ-f2a"/>
+                            <constraint firstItem="CPK-sT-oBW" firstAttribute="top" secondItem="p0y-94-ocq" secondAttribute="bottom" constant="25" id="HPd-v7-ZZM"/>
+                            <constraint firstItem="9t3-Rx-7ag" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="JN8-ZZ-8fd"/>
+                            <constraint firstItem="p0y-94-ocq" firstAttribute="top" secondItem="9t3-Rx-7ag" secondAttribute="bottom" constant="18" id="Nox-V6-qjz"/>
+                            <constraint firstItem="2Pn-ar-c19" firstAttribute="leading" secondItem="9t3-Rx-7ag" secondAttribute="leading" id="VGe-2O-Nne"/>
+                            <constraint firstItem="p0y-94-ocq" firstAttribute="leading" secondItem="9t3-Rx-7ag" secondAttribute="leading" id="ZEe-cB-SPo"/>
+                            <constraint firstItem="p0y-94-ocq" firstAttribute="trailing" secondItem="CPK-sT-oBW" secondAttribute="trailing" id="Zcz-ey-v27"/>
+                            <constraint firstItem="p0y-94-ocq" firstAttribute="trailing" secondItem="9t3-Rx-7ag" secondAttribute="trailing" id="gvz-0Y-YxW"/>
+                            <constraint firstItem="9t3-Rx-7ag" firstAttribute="top" secondItem="2Pn-ar-c19" secondAttribute="bottom" constant="17" id="jI8-kr-Vw0"/>
+                            <constraint firstItem="UNv-BO-bEL" firstAttribute="centerX" secondItem="CPK-sT-oBW" secondAttribute="centerX" id="pEz-Ax-Usx"/>
+                            <constraint firstItem="2Pn-ar-c19" firstAttribute="trailing" secondItem="9t3-Rx-7ag" secondAttribute="trailing" id="urF-qN-bwh"/>
+                            <constraint firstItem="CPK-sT-oBW" firstAttribute="leading" secondItem="p0y-94-ocq" secondAttribute="leading" id="vIE-CZ-BVB"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="R8q-bK-yoI"/>
+                    <connections>
+                        <outlet property="colorTextField" destination="CPK-sT-oBW" id="Qds-rc-RQj"/>
+                        <outlet property="makeTextField" destination="2Pn-ar-c19" id="YTz-PT-Azk"/>
+                        <outlet property="modelTextField" destination="9t3-Rx-7ag" id="zLH-XK-WlN"/>
+                        <outlet property="yearTextField" destination="p0y-94-ocq" id="CWH-Vw-1gK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1953" y="387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fko-FC-KTR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W7o-2k-4hx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AXC-5O-Bu8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2kC-35-ikq" kind="relationship" relationship="rootViewController" id="17L-NL-UNr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6zs-rR-nb3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="473" y="387"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GTD-LL-Qg8"/>
+    </inferredMetricsTieBreakers>
 </document>
