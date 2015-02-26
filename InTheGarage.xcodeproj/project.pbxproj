@@ -10,11 +10,14 @@
 		687C05CD1A7AEA1900677909 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 687C05CC1A7AEA1900677909 /* main.m */; };
 		687C05D01A7AEA1900677909 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 687C05CF1A7AEA1900677909 /* AppDelegate.m */; };
 		687C05D31A7AEA1900677909 /* InTheGarage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 687C05D11A7AEA1900677909 /* InTheGarage.xcdatamodeld */; };
-		687C05D61A7AEA1900677909 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 687C05D51A7AEA1900677909 /* ViewController.m */; };
+		687C05D61A7AEA1900677909 /* CarDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 687C05D51A7AEA1900677909 /* CarDetailViewController.m */; };
 		687C05D91A7AEA1900677909 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687C05D71A7AEA1900677909 /* Main.storyboard */; };
 		687C05DB1A7AEA1900677909 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687C05DA1A7AEA1900677909 /* Images.xcassets */; };
 		687C05DE1A7AEA1900677909 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 687C05DC1A7AEA1900677909 /* LaunchScreen.xib */; };
 		687C05EA1A7AEA1900677909 /* InTheGarageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 687C05E91A7AEA1900677909 /* InTheGarageTests.m */; };
+		FC7B1C6B1A9F930600B3FAF6 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7B1C6A1A9F930600B3FAF6 /* CoreDataHelper.m */; };
+		FC7B1C6E1A9F951F00B3FAF6 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7B1C6D1A9F951F00B3FAF6 /* Car.m */; };
+		FC7B1C711A9F953100B3FAF6 /* CarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7B1C701A9F953100B3FAF6 /* CarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +37,20 @@
 		687C05CE1A7AEA1900677909 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		687C05CF1A7AEA1900677909 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		687C05D21A7AEA1900677909 /* InTheGarage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InTheGarage.xcdatamodel; sourceTree = "<group>"; };
-		687C05D41A7AEA1900677909 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		687C05D51A7AEA1900677909 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		687C05D41A7AEA1900677909 /* CarDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarDetailViewController.h; sourceTree = "<group>"; };
+		687C05D51A7AEA1900677909 /* CarDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarDetailViewController.m; sourceTree = "<group>"; };
 		687C05D81A7AEA1900677909 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		687C05DA1A7AEA1900677909 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		687C05DD1A7AEA1900677909 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		687C05E31A7AEA1900677909 /* InTheGarageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InTheGarageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		687C05E81A7AEA1900677909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		687C05E91A7AEA1900677909 /* InTheGarageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InTheGarageTests.m; sourceTree = "<group>"; };
+		FC7B1C691A9F930600B3FAF6 /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
+		FC7B1C6A1A9F930600B3FAF6 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
+		FC7B1C6C1A9F951F00B3FAF6 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		FC7B1C6D1A9F951F00B3FAF6 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		FC7B1C6F1A9F953100B3FAF6 /* CarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarController.h; sourceTree = "<group>"; };
+		FC7B1C701A9F953100B3FAF6 /* CarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +94,18 @@
 			children = (
 				687C05CE1A7AEA1900677909 /* AppDelegate.h */,
 				687C05CF1A7AEA1900677909 /* AppDelegate.m */,
-				687C05D41A7AEA1900677909 /* ViewController.h */,
-				687C05D51A7AEA1900677909 /* ViewController.m */,
+				FC7B1C691A9F930600B3FAF6 /* CoreDataHelper.h */,
+				FC7B1C6A1A9F930600B3FAF6 /* CoreDataHelper.m */,
+				687C05D41A7AEA1900677909 /* CarDetailViewController.h */,
+				687C05D51A7AEA1900677909 /* CarDetailViewController.m */,
+				FC7B1C6F1A9F953100B3FAF6 /* CarController.h */,
+				FC7B1C701A9F953100B3FAF6 /* CarController.m */,
 				687C05D71A7AEA1900677909 /* Main.storyboard */,
 				687C05DA1A7AEA1900677909 /* Images.xcassets */,
 				687C05DC1A7AEA1900677909 /* LaunchScreen.xib */,
 				687C05D11A7AEA1900677909 /* InTheGarage.xcdatamodeld */,
+				FC7B1C6C1A9F951F00B3FAF6 /* Car.h */,
+				FC7B1C6D1A9F951F00B3FAF6 /* Car.m */,
 				687C05CA1A7AEA1900677909 /* Supporting Files */,
 			);
 			path = InTheGarage;
@@ -222,9 +237,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC7B1C711A9F953100B3FAF6 /* CarController.m in Sources */,
+				FC7B1C6E1A9F951F00B3FAF6 /* Car.m in Sources */,
 				687C05D01A7AEA1900677909 /* AppDelegate.m in Sources */,
 				687C05D31A7AEA1900677909 /* InTheGarage.xcdatamodeld in Sources */,
-				687C05D61A7AEA1900677909 /* ViewController.m in Sources */,
+				687C05D61A7AEA1900677909 /* CarDetailViewController.m in Sources */,
+				FC7B1C6B1A9F930600B3FAF6 /* CoreDataHelper.m in Sources */,
 				687C05CD1A7AEA1900677909 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +434,7 @@
 				687C05EF1A7AEA1900677909 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		687C05F01A7AEA1900677909 /* Build configuration list for PBXNativeTarget "InTheGarageTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +443,7 @@
 				687C05F21A7AEA1900677909 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
