@@ -39,5 +39,11 @@
     return car;
 }
 
+- (void)removeCar:(Car *)car {
+    [car.managedObjectContext deleteObject:car];
+    [self save];
+}
+
+
 
 @end

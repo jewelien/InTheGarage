@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CarController.h"
+
 
 @interface CarDetailViewController : UIViewController
+
+@property (nonatomic, weak) Car *car;
 
 
 @end

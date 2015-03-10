@@ -18,6 +18,7 @@
 		FC7B1C6B1A9F930600B3FAF6 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7B1C6A1A9F930600B3FAF6 /* CoreDataHelper.m */; };
 		FC7B1C6E1A9F951F00B3FAF6 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7B1C6D1A9F951F00B3FAF6 /* Car.m */; };
 		FC7B1C711A9F953100B3FAF6 /* CarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7B1C701A9F953100B3FAF6 /* CarController.m */; };
+		FC7B1C741A9FAD5E00B3FAF6 /* CarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7B1C731A9FAD5E00B3FAF6 /* CarTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,12 +46,15 @@
 		687C05E31A7AEA1900677909 /* InTheGarageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InTheGarageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		687C05E81A7AEA1900677909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		687C05E91A7AEA1900677909 /* InTheGarageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InTheGarageTests.m; sourceTree = "<group>"; };
+		FC33414E1AAEA91E00B02E65 /* InTheGarage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = InTheGarage.entitlements; sourceTree = "<group>"; };
 		FC7B1C691A9F930600B3FAF6 /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
 		FC7B1C6A1A9F930600B3FAF6 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
 		FC7B1C6C1A9F951F00B3FAF6 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		FC7B1C6D1A9F951F00B3FAF6 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		FC7B1C6F1A9F953100B3FAF6 /* CarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarController.h; sourceTree = "<group>"; };
 		FC7B1C701A9F953100B3FAF6 /* CarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarController.m; sourceTree = "<group>"; };
+		FC7B1C721A9FAD5E00B3FAF6 /* CarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarTableViewController.h; sourceTree = "<group>"; };
+		FC7B1C731A9FAD5E00B3FAF6 /* CarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 		687C05C91A7AEA1900677909 /* InTheGarage */ = {
 			isa = PBXGroup;
 			children = (
+				FC33414E1AAEA91E00B02E65 /* InTheGarage.entitlements */,
 				687C05CE1A7AEA1900677909 /* AppDelegate.h */,
 				687C05CF1A7AEA1900677909 /* AppDelegate.m */,
 				FC7B1C691A9F930600B3FAF6 /* CoreDataHelper.h */,
@@ -100,6 +105,8 @@
 				687C05D51A7AEA1900677909 /* CarDetailViewController.m */,
 				FC7B1C6F1A9F953100B3FAF6 /* CarController.h */,
 				FC7B1C701A9F953100B3FAF6 /* CarController.m */,
+				FC7B1C721A9FAD5E00B3FAF6 /* CarTableViewController.h */,
+				FC7B1C731A9FAD5E00B3FAF6 /* CarTableViewController.m */,
 				687C05D71A7AEA1900677909 /* Main.storyboard */,
 				687C05DA1A7AEA1900677909 /* Images.xcassets */,
 				687C05DC1A7AEA1900677909 /* LaunchScreen.xib */,
@@ -186,6 +193,12 @@
 				TargetAttributes = {
 					687C05C61A7AEA1900677909 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = TDKNZSR6G6;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 					687C05E21A7AEA1900677909 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -237,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC7B1C741A9FAD5E00B3FAF6 /* CarTableViewController.m in Sources */,
 				FC7B1C711A9F953100B3FAF6 /* CarController.m in Sources */,
 				FC7B1C6E1A9F951F00B3FAF6 /* Car.m in Sources */,
 				687C05D01A7AEA1900677909 /* AppDelegate.m in Sources */,
@@ -365,9 +379,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = InTheGarage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -375,9 +392,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = InTheGarage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

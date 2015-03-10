@@ -7,7 +7,6 @@
 //
 
 #import "CarDetailViewController.h"
-#import "CarController.h"
 
 @interface CarDetailViewController ()
 
@@ -15,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *modelField;
 @property (weak, nonatomic) IBOutlet UITextField *yearField;
 
-@property (nonatomic, weak) Car *car;
 
 
 @end
@@ -25,7 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self updateWithCar:[[CarController sharedInstance].cars lastObject]];
+//    [self updateWithCar:[[CarController sharedInstance].cars lastObject]];
+    [self updateWithCar:self.car];
 }
 
 - (IBAction)saveButton:(id)sender {
@@ -38,6 +37,8 @@
     } else {
         [[CarController sharedInstance] saveCarWithMake:self.makeField.text model:self.modelField.text year:self.yearField.text];
     }
+
+
 }
 
 - (void)updateWithCar:(Car *)car {

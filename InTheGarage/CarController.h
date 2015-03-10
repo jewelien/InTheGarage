@@ -20,4 +20,6 @@
 
 - (void)save;
 
+- (void)removeCar:(Car *)car;
+
 @end
