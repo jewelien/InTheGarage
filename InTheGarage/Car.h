@@ -9,11 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+static NSString * const CarRecordKey = @"car";
+static NSString * const CarMakeKey = @"make";
+static NSString * const CarModelKey = @"model";
+static NSString * const CarYearKey = @"year";
+static NSString * const CarIdentifierKey = @"identifier";
 
 @interface Car : NSManagedObject
 
 @property (nonatomic, retain) NSString * make;
 @property (nonatomic, retain) NSString * model;
 @property (nonatomic, retain) NSString * year;
+
+@property (nonatomic, strong) NSString *identifier;
+@property (nonatomic) NSNumber *uploaded;
 
 @end

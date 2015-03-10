@@ -15,6 +15,7 @@
 		687C05DB1A7AEA1900677909 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687C05DA1A7AEA1900677909 /* Images.xcassets */; };
 		687C05DE1A7AEA1900677909 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 687C05DC1A7AEA1900677909 /* LaunchScreen.xib */; };
 		687C05EA1A7AEA1900677909 /* InTheGarageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 687C05E91A7AEA1900677909 /* InTheGarageTests.m */; };
+		FC3341541AAEAFE500B02E65 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3341531AAEAFE500B02E65 /* CloudKit.framework */; };
 		FC7B1C6B1A9F930600B3FAF6 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7B1C6A1A9F930600B3FAF6 /* CoreDataHelper.m */; };
 		FC7B1C6E1A9F951F00B3FAF6 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7B1C6D1A9F951F00B3FAF6 /* Car.m */; };
 		FC7B1C711A9F953100B3FAF6 /* CarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7B1C701A9F953100B3FAF6 /* CarController.m */; };
@@ -47,6 +48,7 @@
 		687C05E81A7AEA1900677909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		687C05E91A7AEA1900677909 /* InTheGarageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InTheGarageTests.m; sourceTree = "<group>"; };
 		FC33414E1AAEA91E00B02E65 /* InTheGarage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = InTheGarage.entitlements; sourceTree = "<group>"; };
+		FC3341531AAEAFE500B02E65 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		FC7B1C691A9F930600B3FAF6 /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
 		FC7B1C6A1A9F930600B3FAF6 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
 		FC7B1C6C1A9F951F00B3FAF6 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC3341541AAEAFE500B02E65 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,7 @@
 		687C05BE1A7AEA1900677909 = {
 			isa = PBXGroup;
 			children = (
+				FC3341531AAEAFE500B02E65 /* CloudKit.framework */,
 				687C05C91A7AEA1900677909 /* InTheGarage */,
 				687C05E61A7AEA1900677909 /* InTheGarageTests */,
 				687C05C81A7AEA1900677909 /* Products */,
@@ -196,7 +200,7 @@
 						DevelopmentTeam = TDKNZSR6G6;
 						SystemCapabilities = {
 							com.apple.iCloud = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -379,6 +383,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = InTheGarage/InTheGarage.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = InTheGarage/Info.plist;
@@ -392,6 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = InTheGarage/InTheGarage.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = InTheGarage/Info.plist;

@@ -16,7 +16,7 @@
 
 + (CarController *)sharedInstance;
 
-- (Car *)saveCarWithMake:(NSString *)make model:(NSString *)model year:(NSString *)year;
+- (void)saveCarWithMake:(NSString *)make model:(NSString *)model year:(NSString *)year;
 
 - (void)save;
 

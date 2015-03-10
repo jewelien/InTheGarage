@@ -15,4 +15,7 @@
 @dynamic model;
 @dynamic year;
 
+@dynamic identifier;
+@dynamic uploaded;
+
 @end
